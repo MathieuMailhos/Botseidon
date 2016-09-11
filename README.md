@@ -5,6 +5,10 @@ Part of TechCrunch Disrupt hackathon 2016 in San Francisco. Team of 1.
 This project is a weather bot based on IBM Watson.
 Talk and interact with Botseidon to determin which gear to bring on the water depending on your location and current weather conditions.
 
+## Exemple
+Ask for the current conditions, get the details about your place and get the proper gear estimate for this situation.
+![botseidonv1](https://cloud.githubusercontent.com/assets/5645869/18419894/810a6d00-781a-11e6-8536-145e56b90a7c.png)
+
 
 ## Install and Run
 
