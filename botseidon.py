@@ -13,13 +13,12 @@ class City:
     def _get_city_data(self):
         r = requests.get('http://api.openweathermap.org/data/2.5/weather?q=' + self.name + '&appid=' + conf['openweather_key'])
         body = json.loads(r.text)
-        print(body)
         if 'weather' in body and len(body['weather']) > 0 and 'main' in body['weather']:
             self.weather = body['weather']['main']
         else:
             self.weather = None
         if 'wind' in body and 'speed' in body['wind']:
-            self.wind = float(body['wind']['speed']) * 1.94384
+            self.wind = int(float(body['wind']['speed']) * 1.94384 * 5)
         else:
             self.wind = None
 
@@ -55,9 +54,9 @@ while True:
         if "You live in:" in res["output"]["text"][0]:
             city = City(res["output"]["text"][0].split(':')[-1])
             city._get_city_data()
-            print("asking for the wind")
-            res = ask("The wind is blowing " + str(city.wind), context )
-
-        print(res["output"]["text"][0])
+            res = ask("The wind is blowing " + str(city.wind), context)
+        for output in res["output"]["text"]:
+            if output != "":
+                print(output)
     else:
         print("> Error: could not understand the meaning")
