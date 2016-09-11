@@ -3,7 +3,7 @@
 ## Synopsis
 Part of TechCrunch Disrupt hackathon 2016 in San Francisco. Team of 1. 
 This project is a weather bot based on IBM Watson.
-Talk and interact with Botseidon to determin your best surfing spot of the day depending on your location, tastes and current weather conditions.
+Talk and interact with Botseidon to determin which gear to bring on the water depending on your location and current weather conditions.
 
 
 ## Install and Run
@@ -21,6 +21,12 @@ Create your account on [OpenWeather](http://openweathermap.org) and import your 
 
 ### Run
 Execute botseidon.py to start a shell and interact with the bot.
+
+
+## Roadmap
+- Add a GUI
+- Add the size of the board
+- Fill more locations
 
 ## Contributors
 - Mathieu Mailhos
